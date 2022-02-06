@@ -24,5 +24,5 @@ jobs:
         uses: joelwmale/webhook-action@master
         with:
           url: ${{ secrets.ANNOUNCEMENT_WEBHOOK }}
-          headers: '{"Content-Type": "application/json", "X-GitHub-Delivery": $DELIVERY, "X-GitHub-Event": $TRIGGER }'
+          headers: '{"Content-Type": "application/json", "X-GitHub-Delivery": ${{ github.sha }}, "X-GitHub-Event": ${{ github.event_name }} }'
           body: ${{ toJson(github.event) }}
