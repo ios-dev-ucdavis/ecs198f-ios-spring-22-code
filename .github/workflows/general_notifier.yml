@@ -22,6 +22,6 @@ jobs:
         uses: jasongitmail/fast-webhook@v1.1.4
         with:
           # The webhook URL to send the request to.
-          url: ${{ secret.GENERAL_WEBHOOK }}
+          url: ${{ secrets.GENERAL_WEBHOOK }}
           # The stringified JSON body to be sent, if any.
           json: ${{ github.event.discussion }}
