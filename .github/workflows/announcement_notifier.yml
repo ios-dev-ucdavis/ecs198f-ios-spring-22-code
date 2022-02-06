@@ -14,6 +14,10 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
+      - name: Print Body
+        run: |
+          echo ${{ github.event.discussion }}
+          echo ${{ github.event }}
       - name: Webhook Notifier
         uses: joelwmale/webhook-action@master
         with:
@@ -21,3 +25,5 @@ jobs:
           url: ${{ secrets.ANNOUNCEMENT_WEBHOOK }}
           headers: '{ "Content-Type": "application/json" }'
           body: ${{ github.event.discussion }}
+          
+      
