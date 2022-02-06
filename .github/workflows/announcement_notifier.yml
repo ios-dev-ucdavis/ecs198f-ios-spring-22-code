@@ -21,4 +21,4 @@ jobs:
     steps:
       - name: Webhook Notifier
         run: |
-          'curl --location --request POST "${WEBHOOK}" --header "x-github-event: $TRIGGER" --header "x-github-delivery: $DELIVERY" --header "Content-Type: application/json" --data-raw "$(echo "$GITHUB_EVENT"|jq -c .)"'
+          curl --location --request POST "${WEBHOOK}" --header "x-github-event: $TRIGGER" --header "x-github-delivery: $DELIVERY" --header "Content-Type: application/json" --data-raw "$(echo "$GITHUB_EVENT"|jq -c .)"
