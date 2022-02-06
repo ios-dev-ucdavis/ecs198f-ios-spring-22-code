@@ -1,10 +1,10 @@
 # This is a basic workflow to help you get started with Actions
 
-name: General Discussion Change
+name: General Discussion Notifier
 
 on: 
   discussion:
-    types: [created, answered]
+    types: created
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
