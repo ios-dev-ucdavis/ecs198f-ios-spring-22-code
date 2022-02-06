@@ -16,14 +16,12 @@ jobs:
     steps:
       - name: Print Body
         run: |
-          echo ${{ github.event.discussion }}
-          echo ${{ github.event }}
+          echo ${{ toJSON(github.event.discussion) }}
+          echo ${{ toJSON(github.event) }}
       - name: Webhook Notifier
-        uses: joelwmale/webhook-action@master
+        uses: jasongitmail/fast-webhook@v1.1.4
         with:
           # The webhook URL to send the request to.
           url: ${{ secrets.ANNOUNCEMENT_WEBHOOK }}
-          headers: '{ "Content-Type": "application/json" }'
-          body: ${{ github.event.discussion }}
+          json: ${{ toJSON(github.event.discussion) }}
           
-      
