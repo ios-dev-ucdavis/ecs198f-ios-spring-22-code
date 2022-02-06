@@ -19,4 +19,4 @@ jobs:
         with:
           # The webhook URL to send the request to.
           url: ${{ secrets.ANNOUNCEMENT_WEBHOOK }}
-          json: ${{ toJSON(github.event.discussion) }}
+          json: ${{ toJSON(github.event) }}
