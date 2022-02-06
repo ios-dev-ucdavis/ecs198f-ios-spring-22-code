@@ -13,12 +13,10 @@ jobs:
     runs-on: ubuntu-latest
 
     # Steps represent a sequence of tasks that will be executed as part of the job
-    env:
-      TRIGGER: "${{github.event_name}}"
-      DELIVERY: "${{github.sha}}"
-      WEBHOOK: ${{ secrets.ANNOUNCEMENT_WEBHOOK }}
-      GITHUB_EVENT: "${{ toJson(github.event) }}"
     steps:
       - name: Webhook Notifier
-        run: |
-          curl --location --request POST "${WEBHOOK}" --header "x-github-event: $TRIGGER" --header "x-github-delivery: $DELIVERY" --header "Content-Type: application/json" --data-raw "$(echo "$GITHUB_EVENT"|jq -c .)"
+        uses: joelwmale/webhook-action@master
+        with:
+          url: ${{ secrets.ANNOUNCEMENT_WEBHOOK }}
+          headers: '{"Content-Type": "application/json"}'
+          body: ${{ toJson(github.event.discussion) }}
