@@ -11,6 +11,12 @@ jobs:
     if: ${{ github.event.discussion.category.name == 'Announcements' }}
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
+    
+    env:
+      TRIGGER: "${{ github.event_name }}"
+      DELIVERY: "${{ github.sha }}"
+      WEBHOOK: ${{ secrets.ANNOUNCEMENT_WEBHOOK }}
+      GITHUB_EVENT: "${{ toJson(github.event) }}"
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
@@ -18,5 +24,5 @@ jobs:
         uses: joelwmale/webhook-action@master
         with:
           url: ${{ secrets.ANNOUNCEMENT_WEBHOOK }}
-          headers: '{"Content-Type": "application/json"}'
-          body: ${{ toJson(github.event.discussion) }}
+          headers: '{"Content-Type": "application/json", "X-GitHub-Delivery": $DELIVERY, "X-GitHub-Event": $TRIGGER }'
+          body: ${{ toJson(github.event) }}
