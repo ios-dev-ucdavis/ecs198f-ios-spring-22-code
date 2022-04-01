@@ -11,8 +11,7 @@ struct ContentView: View {
     var myStr = "Hello, Yibo"
     
     var body: some View {
-        return Text(myStr)
-            .padding()
+        Text(myStr)
     }
 }
 
