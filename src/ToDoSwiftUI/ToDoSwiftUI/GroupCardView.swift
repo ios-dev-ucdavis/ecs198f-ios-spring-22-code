@@ -9,7 +9,7 @@ import SwiftUI
 
 struct GroupCardView: View {
     var groupName = "New Group"
-    var groupLabelColor: Color = .blue
+    @State var groupLabelColor: Color = .blue
     var hstackSpacing: CGFloat = 0
     
     var body: some View {
@@ -31,6 +31,17 @@ struct GroupCardView: View {
 
                 HStack {
                     Spacer()
+                    
+                    Button("Change Color") {
+//                        if self.groupLabelColor == .blue {
+//                            self.groupLabelColor = .green
+//                        } else {
+//                            self.groupLabelColor = .blue
+//                        }
+                        // Ternary operator
+                        self.groupLabelColor = (self.groupLabelColor == .blue) ? .green : .blue
+                    }
+                    
                     Image(systemName: "chevron.right")
                 }
             }
@@ -61,3 +72,15 @@ struct GroupCardView_Previews: PreviewProvider {
 //            .border(Color.red, width: 2)
     }
 }
+
+//struct ViewModifier_Previews: PreviewProvider {
+//    static var previews: some View {
+//        Color.red
+//            .frame(width: 50, height: 50)
+//            .padding()
+//            .background(.green)
+//            .padding()
+//            .background(.blue)
+//            .border(.black, width: 2)
+//    }
+//}
