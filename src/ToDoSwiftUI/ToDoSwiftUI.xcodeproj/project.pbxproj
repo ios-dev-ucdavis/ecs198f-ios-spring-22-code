@@ -12,6 +12,7 @@
 		8857469E27F3CD30006830F5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8857469D27F3CD30006830F5 /* Assets.xcassets */; };
 		885746A127F3CD30006830F5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 885746A027F3CD30006830F5 /* Preview Assets.xcassets */; };
 		885746A827F66EF3006830F5 /* GroupCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 885746A727F66EF3006830F5 /* GroupCardView.swift */; };
+		885746AE27FFAD69006830F5 /* ReminderGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 885746AD27FFAD69006830F5 /* ReminderGroup.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +22,7 @@
 		8857469D27F3CD30006830F5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		885746A027F3CD30006830F5 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		885746A727F66EF3006830F5 /* GroupCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupCardView.swift; sourceTree = "<group>"; };
+		885746AD27FFAD69006830F5 /* ReminderGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderGroup.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 				8857469927F3CD2F006830F5 /* ToDoSwiftUIApp.swift */,
 				8857469B27F3CD2F006830F5 /* ContentView.swift */,
 				885746A727F66EF3006830F5 /* GroupCardView.swift */,
+				885746AD27FFAD69006830F5 /* ReminderGroup.swift */,
 				8857469D27F3CD30006830F5 /* Assets.xcassets */,
 				8857469F27F3CD30006830F5 /* Preview Content */,
 			);
@@ -141,6 +144,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				885746A827F66EF3006830F5 /* GroupCardView.swift in Sources */,
+				885746AE27FFAD69006830F5 /* ReminderGroup.swift in Sources */,
 				8857469C27F3CD2F006830F5 /* ContentView.swift in Sources */,
 				8857469A27F3CD2F006830F5 /* ToDoSwiftUIApp.swift in Sources */,
 			);
