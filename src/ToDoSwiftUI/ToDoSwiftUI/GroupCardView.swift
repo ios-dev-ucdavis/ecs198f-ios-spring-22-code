@@ -8,13 +8,28 @@
 import SwiftUI
 
 struct GroupCardView: View {
-    var groupName = "New Group"
-    @State var groupLabelColor: Color = .blue
+    @State var reminderGroup = ReminderGroup(name: "Unamed Reminder Group")
+//    var groupName = "New Group"
+//    @State var groupLabelColor: Color = .blue
     var hstackSpacing: CGFloat = 0
+    
+    init(name: String) {
+        self.reminderGroup = ReminderGroup(name: name)
+    }
+    
+    init() {}
+    
+    var labelColor: Color {
+        reminderGroup.labelColor
+    }
+    
+    var groupName: String {
+        reminderGroup.name
+    }
     
     var body: some View {
         HStack(spacing: hstackSpacing) {
-            groupLabelColor
+            labelColor
                 .frame(width: 10)
 
             VStack(alignment: .leading, spacing: 5) {
@@ -39,7 +54,8 @@ struct GroupCardView: View {
 //                            self.groupLabelColor = .blue
 //                        }
                         // Ternary operator
-                        self.groupLabelColor = (self.groupLabelColor == .blue) ? .green : .blue
+//                        self.groupLabelColor = (self.groupLabelColor == .blue) ? .green : .blue
+                        self.reminderGroup.changeLabelColor(to: (self.labelColor == .blue) ? .green : .blue)
                     }
                     
                     Image(systemName: "chevron.right")
@@ -47,7 +63,7 @@ struct GroupCardView: View {
             }
             .padding()
         }
-        .background(Color.gray.opacity(0.2))
+        .background(Color("ColorBgColor"))
         .cornerRadius(10)
     }
 }
@@ -58,14 +74,14 @@ struct GroupCardView_Previews: PreviewProvider {
             GroupCardView()
                 .frame(width: 200, height: 150)
             
-            GroupCardView()
-                .frame(width: 300, height: 150)
+//            GroupCardView()
+//                .frame(width: 300, height: 150)
             
-            GroupCardView(groupLabelColor: Color.red)
-                .frame(width: 200, height: 150)
-            
-            GroupCardView(groupName: "ECS 198F")
-                .frame(width: 150, height: 150)
+//            GroupCardView(groupLabelColor: Color.red)
+//                .frame(width: 200, height: 150)
+//
+//            GroupCardView(groupName: "ECS 198F")
+//                .frame(width: 150, height: 150)
         }
 //        GroupCardView()
 //            .frame(width: 200, height: 150)
