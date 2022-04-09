@@ -63,7 +63,7 @@ struct GroupCardView: View {
             }
             .padding()
         }
-        .background(Color("ColorBgColor"))
+        .background(Color("CardBgColor"))
         .cornerRadius(10)
     }
 }
