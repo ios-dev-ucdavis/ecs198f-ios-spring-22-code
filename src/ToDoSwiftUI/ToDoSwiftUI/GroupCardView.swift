@@ -63,29 +63,23 @@ struct GroupCardView: View {
             }
             .padding()
         }
-        .background(Color("CardBgColor"))
+        .background(Color.systemBackground)
         .cornerRadius(10)
     }
 }
 
 struct GroupCardView_Previews: PreviewProvider {
     static var previews: some View {
-        VStack {
+        ZStack {
             GroupCardView()
                 .frame(width: 200, height: 150)
-            
-//            GroupCardView()
-//                .frame(width: 300, height: 150)
-            
-//            GroupCardView(groupLabelColor: Color.red)
-//                .frame(width: 200, height: 150)
-//
-//            GroupCardView(groupName: "ECS 198F")
-//                .frame(width: 150, height: 150)
         }
-//        GroupCardView()
-//            .frame(width: 200, height: 150)
-//            .border(Color.red, width: 2)
+        .preferredColorScheme(.light)
+//        .frame(maxWidth: .infinity)
+//        .frame(maxHeight: .infinity)
+        .modifier(Expand())
+//        .expand()
+        .background(.gray)
     }
 }
 
