@@ -8,23 +8,30 @@
 import SwiftUI
 
 struct GroupCardView: View {
-    @State var reminderGroup = ReminderGroup(name: "Unamed Reminder Group")
+    @ObservedObject var reminderGroupVM: ReminderGroupViewModel = ReminderGroupViewModel("Unnamed Group")
+    
+//    @State var reminderGroup = ReminderGroup(name: "Unamed Reminder Group")
 //    var groupName = "New Group"
 //    @State var groupLabelColor: Color = .blue
     var hstackSpacing: CGFloat = 0
     
     init(name: String) {
-        self.reminderGroup = ReminderGroup(name: name)
+//        self.reminderGroup = ReminderGroup(name: name)
+        self.reminderGroupVM = ReminderGroupViewModel(name)
+    }
+    
+    init(_ reminderGroupVM: ReminderGroupViewModel) {
+        self.reminderGroupVM = reminderGroupVM
     }
     
     init() {}
     
     var labelColor: Color {
-        reminderGroup.labelColor
+        self.reminderGroupVM.labelColor
     }
     
     var groupName: String {
-        reminderGroup.name
+        self.reminderGroupVM.name
     }
     
     var body: some View {
@@ -55,7 +62,8 @@ struct GroupCardView: View {
 //                        }
                         // Ternary operator
 //                        self.groupLabelColor = (self.groupLabelColor == .blue) ? .green : .blue
-                        self.reminderGroup.changeLabelColor(to: (self.labelColor == .blue) ? .green : .blue)
+//                        self.reminderGroup.changeLabelColor(to: (self.labelColor == .blue) ? .green : .blue)
+                        self.reminderGroupVM.changeLabelColor(to: (self.labelColor == .blue) ? .green : .blue)
                     }
                     
                     Image(systemName: "chevron.right")
@@ -77,8 +85,8 @@ struct GroupCardView_Previews: PreviewProvider {
         .preferredColorScheme(.light)
 //        .frame(maxWidth: .infinity)
 //        .frame(maxHeight: .infinity)
-        .modifier(Expand())
-//        .expand()
+//        .modifier(Expand())
+        .expand()
         .background(.gray)
     }
 }
