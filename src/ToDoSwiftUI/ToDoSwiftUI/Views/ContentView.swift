@@ -20,14 +20,42 @@ struct ContentView: View {
     }()
     
     var body: some View {
-        ScrollView {
-            ForEach(reminderGroupNames, id: \.hashValue) { name in
-                GroupCardView(name: name)
-                    .frame(height: 150)
-                    .padding(.horizontal)
+        NavigationView {
+            ScrollView {
+                ForEach(reminderGroupNames, id: \.hashValue) { name in
+                    NavigationLink {
+                        Text("Hello")
+                            .navigationTitle(name)
+                    } label: {
+                        GroupCardView(name: name)
+                            .frame(height: 150)
+                            .padding(.horizontal)
+                    }
+                    .buttonStyle(.plain)
+                }
+            }
+            .background(Color.gray)
+//            .navigationBarHidden(true)
+            .navigationTitle("Welcome")
+            .toolbar {
+                ToolbarItem(placement: .navigationBarLeading) {
+                    Button {
+                        print("Hello")
+                    } label: {
+                        Image(systemName: "square.and.arrow.up")
+                    }
+                }
+                
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    Button {
+                        print("Hello")
+                    } label: {
+                        Image(systemName: "trash.square")
+                    }
+                }
             }
         }
-        .background(Color.gray)
+        .navigationViewStyle(.stack)
     }
 }
 
