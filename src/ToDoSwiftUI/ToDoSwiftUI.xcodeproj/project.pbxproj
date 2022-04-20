@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8832285F280F7E82008A8EE7 /* AnimationDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8832285E280F7E82008A8EE7 /* AnimationDemo.swift */; };
+		88322861280F8218008A8EE7 /* ProgessRingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88322860280F8218008A8EE7 /* ProgessRingView.swift */; };
+		88322863280F840A008A8EE7 /* AnimationDemo2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88322862280F840A008A8EE7 /* AnimationDemo2.swift */; };
 		8857469A27F3CD2F006830F5 /* ToDoSwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8857469927F3CD2F006830F5 /* ToDoSwiftUIApp.swift */; };
 		8857469C27F3CD2F006830F5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8857469B27F3CD2F006830F5 /* ContentView.swift */; };
 		8857469E27F3CD30006830F5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8857469D27F3CD30006830F5 /* Assets.xcassets */; };
@@ -22,6 +25,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8832285E280F7E82008A8EE7 /* AnimationDemo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimationDemo.swift; sourceTree = "<group>"; };
+		88322860280F8218008A8EE7 /* ProgessRingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgessRingView.swift; sourceTree = "<group>"; };
+		88322862280F840A008A8EE7 /* AnimationDemo2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimationDemo2.swift; sourceTree = "<group>"; };
 		8857469627F3CD2F006830F5 /* ToDoSwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToDoSwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8857469927F3CD2F006830F5 /* ToDoSwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoSwiftUIApp.swift; sourceTree = "<group>"; };
 		8857469B27F3CD2F006830F5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -48,6 +54,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8832285D280F7E33008A8EE7 /* AnimationDemos */ = {
+			isa = PBXGroup;
+			children = (
+				8832285E280F7E82008A8EE7 /* AnimationDemo.swift */,
+				88322862280F840A008A8EE7 /* AnimationDemo2.swift */,
+			);
+			path = AnimationDemos;
+			sourceTree = "<group>";
+		};
 		8857468D27F3CD2F006830F5 = {
 			isa = PBXGroup;
 			children = (
@@ -67,6 +82,7 @@
 		8857469827F3CD2F006830F5 /* ToDoSwiftUI */ = {
 			isa = PBXGroup;
 			children = (
+				8832285D280F7E33008A8EE7 /* AnimationDemos */,
 				88B7CB3A2808EA39005B727E /* Models */,
 				88B7CB392808EA34005B727E /* Views */,
 				88B7CB382808EA28005B727E /* ViewModels */,
@@ -125,6 +141,7 @@
 		88B7CB392808EA34005B727E /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				88322860280F8218008A8EE7 /* ProgessRingView.swift */,
 				885746A727F66EF3006830F5 /* GroupCardView.swift */,
 				8857469B27F3CD2F006830F5 /* ContentView.swift */,
 			);
@@ -216,8 +233,11 @@
 				8857469C27F3CD2F006830F5 /* ContentView.swift in Sources */,
 				8857469A27F3CD2F006830F5 /* ToDoSwiftUIApp.swift in Sources */,
 				88B7CB2828064502005B727E /* hw1hints.swift in Sources */,
+				88322863280F840A008A8EE7 /* AnimationDemo2.swift in Sources */,
 				88B7CB372808E41A005B727E /* View+Utility.swift in Sources */,
+				8832285F280F7E82008A8EE7 /* AnimationDemo.swift in Sources */,
 				88B7CB3C2808EA9F005B727E /* ReminderGroupViewModel.swift in Sources */,
+				88322861280F8218008A8EE7 /* ProgessRingView.swift in Sources */,
 				88B7CB2B28064957005B727E /* Expand.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
