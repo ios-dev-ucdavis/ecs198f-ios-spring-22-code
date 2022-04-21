@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		8832285F280F7E82008A8EE7 /* AnimationDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8832285E280F7E82008A8EE7 /* AnimationDemo.swift */; };
-		88322861280F8218008A8EE7 /* ProgessRingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88322860280F8218008A8EE7 /* ProgessRingView.swift */; };
+		88322861280F8218008A8EE7 /* ProgressRingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88322860280F8218008A8EE7 /* ProgressRingView.swift */; };
 		88322863280F840A008A8EE7 /* AnimationDemo2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88322862280F840A008A8EE7 /* AnimationDemo2.swift */; };
 		8857469A27F3CD2F006830F5 /* ToDoSwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8857469927F3CD2F006830F5 /* ToDoSwiftUIApp.swift */; };
 		8857469C27F3CD2F006830F5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8857469B27F3CD2F006830F5 /* ContentView.swift */; };
@@ -26,7 +26,7 @@
 
 /* Begin PBXFileReference section */
 		8832285E280F7E82008A8EE7 /* AnimationDemo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimationDemo.swift; sourceTree = "<group>"; };
-		88322860280F8218008A8EE7 /* ProgessRingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgessRingView.swift; sourceTree = "<group>"; };
+		88322860280F8218008A8EE7 /* ProgressRingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressRingView.swift; sourceTree = "<group>"; };
 		88322862280F840A008A8EE7 /* AnimationDemo2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimationDemo2.swift; sourceTree = "<group>"; };
 		8857469627F3CD2F006830F5 /* ToDoSwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToDoSwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8857469927F3CD2F006830F5 /* ToDoSwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoSwiftUIApp.swift; sourceTree = "<group>"; };
@@ -141,7 +141,7 @@
 		88B7CB392808EA34005B727E /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				88322860280F8218008A8EE7 /* ProgessRingView.swift */,
+				88322860280F8218008A8EE7 /* ProgressRingView.swift */,
 				885746A727F66EF3006830F5 /* GroupCardView.swift */,
 				8857469B27F3CD2F006830F5 /* ContentView.swift */,
 			);
@@ -237,7 +237,7 @@
 				88B7CB372808E41A005B727E /* View+Utility.swift in Sources */,
 				8832285F280F7E82008A8EE7 /* AnimationDemo.swift in Sources */,
 				88B7CB3C2808EA9F005B727E /* ReminderGroupViewModel.swift in Sources */,
-				88322861280F8218008A8EE7 /* ProgessRingView.swift in Sources */,
+				88322861280F8218008A8EE7 /* ProgressRingView.swift in Sources */,
 				88B7CB2B28064957005B727E /* Expand.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
