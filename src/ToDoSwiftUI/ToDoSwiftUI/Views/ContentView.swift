@@ -19,20 +19,30 @@ struct ContentView: View {
         return names
     }()
     
+    private var columns: [GridItem] {
+        [
+            GridItem(.flexible(minimum: 80), spacing: 15, alignment: .top),
+            GridItem(.flexible(minimum: 80), spacing: 15, alignment: .top)
+        ]
+    }
+    
     var body: some View {
         NavigationView {
             ScrollView {
-                ForEach(reminderGroupNames, id: \.hashValue) { name in
-                    NavigationLink {
-                        Text("Hello")
-                            .navigationTitle(name)
-                    } label: {
-                        GroupCardView(name: name)
-                            .frame(height: 150)
-                            .padding(.horizontal)
+                LazyVGrid(columns: columns, spacing: 20) {
+                    ForEach(reminderGroupNames, id: \.hashValue) { name in
+                        NavigationLink {
+                            Text("Hello")
+                                .navigationTitle(name)
+                        } label: {
+                            GroupCardView(name: name)
+                                .frame(height: 150)
+//                                .padding(.horizontal)
+                        }
+                        .buttonStyle(.plain)
                     }
-                    .buttonStyle(.plain)
                 }
+                .padding(.horizontal)
             }
             .background(Color.gray)
 //            .navigationBarHidden(true)
