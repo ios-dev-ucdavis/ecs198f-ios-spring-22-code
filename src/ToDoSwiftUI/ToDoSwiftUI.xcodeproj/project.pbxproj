@@ -10,6 +10,9 @@
 		8832285F280F7E82008A8EE7 /* AnimationDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8832285E280F7E82008A8EE7 /* AnimationDemo.swift */; };
 		88322861280F8218008A8EE7 /* ProgressRingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88322860280F8218008A8EE7 /* ProgressRingView.swift */; };
 		88322863280F840A008A8EE7 /* AnimationDemo2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88322862280F840A008A8EE7 /* AnimationDemo2.swift */; };
+		8832289028121F2F008A8EE7 /* ActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8832288F28121F2F008A8EE7 /* ActionButton.swift */; };
+		88322892281221A2008A8EE7 /* Animation+Customized.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88322891281221A2008A8EE7 /* Animation+Customized.swift */; };
+		883228942812247D008A8EE7 /* AnyTransition+Customized.swift in Sources */ = {isa = PBXBuildFile; fileRef = 883228932812247D008A8EE7 /* AnyTransition+Customized.swift */; };
 		8857469A27F3CD2F006830F5 /* ToDoSwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8857469927F3CD2F006830F5 /* ToDoSwiftUIApp.swift */; };
 		8857469C27F3CD2F006830F5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8857469B27F3CD2F006830F5 /* ContentView.swift */; };
 		8857469E27F3CD30006830F5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8857469D27F3CD30006830F5 /* Assets.xcassets */; };
@@ -28,6 +31,9 @@
 		8832285E280F7E82008A8EE7 /* AnimationDemo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimationDemo.swift; sourceTree = "<group>"; };
 		88322860280F8218008A8EE7 /* ProgressRingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressRingView.swift; sourceTree = "<group>"; };
 		88322862280F840A008A8EE7 /* AnimationDemo2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimationDemo2.swift; sourceTree = "<group>"; };
+		8832288F28121F2F008A8EE7 /* ActionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionButton.swift; sourceTree = "<group>"; };
+		88322891281221A2008A8EE7 /* Animation+Customized.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Animation+Customized.swift"; sourceTree = "<group>"; };
+		883228932812247D008A8EE7 /* AnyTransition+Customized.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AnyTransition+Customized.swift"; sourceTree = "<group>"; };
 		8857469627F3CD2F006830F5 /* ToDoSwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToDoSwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8857469927F3CD2F006830F5 /* ToDoSwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoSwiftUIApp.swift; sourceTree = "<group>"; };
 		8857469B27F3CD2F006830F5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -110,6 +116,8 @@
 				88B7CB222806404C005B727E /* Color+Utility.swift */,
 				88B7CB2428064330005B727E /* String+Utility.swift */,
 				88B7CB362808E41A005B727E /* View+Utility.swift */,
+				88322891281221A2008A8EE7 /* Animation+Customized.swift */,
+				883228932812247D008A8EE7 /* AnyTransition+Customized.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -144,6 +152,7 @@
 				88322860280F8218008A8EE7 /* ProgressRingView.swift */,
 				885746A727F66EF3006830F5 /* GroupCardView.swift */,
 				8857469B27F3CD2F006830F5 /* ContentView.swift */,
+				8832288F28121F2F008A8EE7 /* ActionButton.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -227,6 +236,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				885746A827F66EF3006830F5 /* GroupCardView.swift in Sources */,
+				88322892281221A2008A8EE7 /* Animation+Customized.swift in Sources */,
 				88B7CB232806404C005B727E /* Color+Utility.swift in Sources */,
 				885746AE27FFAD69006830F5 /* ReminderGroup.swift in Sources */,
 				88B7CB2528064330005B727E /* String+Utility.swift in Sources */,
@@ -239,6 +249,8 @@
 				88B7CB3C2808EA9F005B727E /* ReminderGroupViewModel.swift in Sources */,
 				88322861280F8218008A8EE7 /* ProgressRingView.swift in Sources */,
 				88B7CB2B28064957005B727E /* Expand.swift in Sources */,
+				883228942812247D008A8EE7 /* AnyTransition+Customized.swift in Sources */,
+				8832289028121F2F008A8EE7 /* ActionButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
