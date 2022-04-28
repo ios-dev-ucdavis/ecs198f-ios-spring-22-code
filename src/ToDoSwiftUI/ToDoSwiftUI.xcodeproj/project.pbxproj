@@ -13,6 +13,9 @@
 		8832289028121F2F008A8EE7 /* ActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8832288F28121F2F008A8EE7 /* ActionButton.swift */; };
 		88322892281221A2008A8EE7 /* Animation+Customized.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88322891281221A2008A8EE7 /* Animation+Customized.swift */; };
 		883228942812247D008A8EE7 /* AnyTransition+Customized.swift in Sources */ = {isa = PBXBuildFile; fileRef = 883228932812247D008A8EE7 /* AnyTransition+Customized.swift */; };
+		883228982818921B008A8EE7 /* StructuralIdentity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 883228972818921B008A8EE7 /* StructuralIdentity.swift */; };
+		8832289B281B3D02008A8EE7 /* StateObjectDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8832289A281B3D02008A8EE7 /* StateObjectDemo.swift */; };
+		8832289D281B4C46008A8EE7 /* StableOrUnstableID.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8832289C281B4C46008A8EE7 /* StableOrUnstableID.swift */; };
 		8857469A27F3CD2F006830F5 /* ToDoSwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8857469927F3CD2F006830F5 /* ToDoSwiftUIApp.swift */; };
 		8857469C27F3CD2F006830F5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8857469B27F3CD2F006830F5 /* ContentView.swift */; };
 		8857469E27F3CD30006830F5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8857469D27F3CD30006830F5 /* Assets.xcassets */; };
@@ -34,6 +37,9 @@
 		8832288F28121F2F008A8EE7 /* ActionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionButton.swift; sourceTree = "<group>"; };
 		88322891281221A2008A8EE7 /* Animation+Customized.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Animation+Customized.swift"; sourceTree = "<group>"; };
 		883228932812247D008A8EE7 /* AnyTransition+Customized.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AnyTransition+Customized.swift"; sourceTree = "<group>"; };
+		883228972818921B008A8EE7 /* StructuralIdentity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StructuralIdentity.swift; sourceTree = "<group>"; };
+		8832289A281B3D02008A8EE7 /* StateObjectDemo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StateObjectDemo.swift; sourceTree = "<group>"; };
+		8832289C281B4C46008A8EE7 /* StableOrUnstableID.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StableOrUnstableID.swift; sourceTree = "<group>"; };
 		8857469627F3CD2F006830F5 /* ToDoSwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToDoSwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8857469927F3CD2F006830F5 /* ToDoSwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoSwiftUIApp.swift; sourceTree = "<group>"; };
 		8857469B27F3CD2F006830F5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -69,6 +75,16 @@
 			path = AnimationDemos;
 			sourceTree = "<group>";
 		};
+		88322899281B3CEB008A8EE7 /* Lecture5-2-Codes */ = {
+			isa = PBXGroup;
+			children = (
+				8832289A281B3D02008A8EE7 /* StateObjectDemo.swift */,
+				883228972818921B008A8EE7 /* StructuralIdentity.swift */,
+				8832289C281B4C46008A8EE7 /* StableOrUnstableID.swift */,
+			);
+			path = "Lecture5-2-Codes";
+			sourceTree = "<group>";
+		};
 		8857468D27F3CD2F006830F5 = {
 			isa = PBXGroup;
 			children = (
@@ -88,6 +104,7 @@
 		8857469827F3CD2F006830F5 /* ToDoSwiftUI */ = {
 			isa = PBXGroup;
 			children = (
+				88322899281B3CEB008A8EE7 /* Lecture5-2-Codes */,
 				8832285D280F7E33008A8EE7 /* AnimationDemos */,
 				88B7CB3A2808EA39005B727E /* Models */,
 				88B7CB392808EA34005B727E /* Views */,
@@ -242,10 +259,13 @@
 				88B7CB2528064330005B727E /* String+Utility.swift in Sources */,
 				8857469C27F3CD2F006830F5 /* ContentView.swift in Sources */,
 				8857469A27F3CD2F006830F5 /* ToDoSwiftUIApp.swift in Sources */,
+				8832289B281B3D02008A8EE7 /* StateObjectDemo.swift in Sources */,
 				88B7CB2828064502005B727E /* hw1hints.swift in Sources */,
+				883228982818921B008A8EE7 /* StructuralIdentity.swift in Sources */,
 				88322863280F840A008A8EE7 /* AnimationDemo2.swift in Sources */,
 				88B7CB372808E41A005B727E /* View+Utility.swift in Sources */,
 				8832285F280F7E82008A8EE7 /* AnimationDemo.swift in Sources */,
+				8832289D281B4C46008A8EE7 /* StableOrUnstableID.swift in Sources */,
 				88B7CB3C2808EA9F005B727E /* ReminderGroupViewModel.swift in Sources */,
 				88322861280F8218008A8EE7 /* ProgressRingView.swift in Sources */,
 				88B7CB2B28064957005B727E /* Expand.swift in Sources */,
