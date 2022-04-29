@@ -24,7 +24,10 @@ struct StateObjectDemo: View {
 }
 
 struct ChildView: View {
-    @ObservedObject var vm = DemoVM()
+    // Wrong
+    // @ObservedObject var vm = DemoVM()
+    
+    @StateObject var vm = DemoVM()
     
     var body: some View {
         Text("Num in ChildView: \(vm.num)")
