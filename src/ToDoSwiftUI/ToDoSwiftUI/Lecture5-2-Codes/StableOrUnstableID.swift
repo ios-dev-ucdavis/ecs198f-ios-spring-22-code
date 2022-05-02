@@ -29,7 +29,7 @@ class StableIDDemoVM: ObservableObject {
 }
 
 struct StableIDDemoView: View {
-    @ObservedObject var stableIDVM = StableIDDemoVM()
+    @StateObject var stableIDVM = StableIDDemoVM()
     
     var body: some View {
         VStack {
