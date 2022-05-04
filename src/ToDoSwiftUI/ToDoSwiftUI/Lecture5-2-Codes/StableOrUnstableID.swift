@@ -4,8 +4,13 @@ struct StableIDDemoStruct: Identifiable, Equatable {
     var num: Int
     
     // Unstable
-    var id: UUID {
-        UUID()
+//    var id: UUID {
+//        UUID()
+//    }
+    
+    // Stable
+    var id: Int {
+        num
     }
 }
 
@@ -38,7 +43,7 @@ struct StableIDDemoView: View {
             }
             .animation(.default, value: stableIDVM.myStructs)
 
-            Button("Reload Data") {
+            Button("Add Data") {
                 stableIDVM.addOne()
             }
         }
