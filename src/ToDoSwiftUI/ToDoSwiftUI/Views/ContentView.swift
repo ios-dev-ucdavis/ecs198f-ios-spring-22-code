@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State var showSheet = false
     var myStr = "Hello, Yibo"
     
     let reminderGroupNames: [String] = {
@@ -58,7 +59,7 @@ struct ContentView: View {
                 
                 ToolbarItem(placement: .navigationBarTrailing) {
                     Button {
-                        print("Hello")
+                        showSheet.toggle()
                     } label: {
                         Image(systemName: "trash.square")
                     }
@@ -66,6 +67,9 @@ struct ContentView: View {
             }
         }
         .navigationViewStyle(.stack)
+        .sheet(isPresented: $showSheet) {
+            Text("Hello")
+        }
     }
 }
 
