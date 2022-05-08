@@ -28,6 +28,8 @@
 		88B7CB2B28064957005B727E /* Expand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B7CB2A28064957005B727E /* Expand.swift */; };
 		88B7CB372808E41A005B727E /* View+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B7CB362808E41A005B727E /* View+Utility.swift */; };
 		88B7CB3C2808EA9F005B727E /* ReminderGroupViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B7CB3B2808EA9F005B727E /* ReminderGroupViewModel.swift */; };
+		88FF390C282494C700CFFC0E /* MyForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88FF390B282494C700CFFC0E /* MyForm.swift */; };
+		88FF390E282495C100CFFC0E /* MyTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88FF390D282495C100CFFC0E /* MyTextField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -53,6 +55,8 @@
 		88B7CB2A28064957005B727E /* Expand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Expand.swift; sourceTree = "<group>"; };
 		88B7CB362808E41A005B727E /* View+Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Utility.swift"; sourceTree = "<group>"; };
 		88B7CB3B2808EA9F005B727E /* ReminderGroupViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderGroupViewModel.swift; sourceTree = "<group>"; };
+		88FF390B282494C700CFFC0E /* MyForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyForm.swift; sourceTree = "<group>"; };
+		88FF390D282495C100CFFC0E /* MyTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -170,6 +174,8 @@
 				885746A727F66EF3006830F5 /* GroupCardView.swift */,
 				8857469B27F3CD2F006830F5 /* ContentView.swift */,
 				8832288F28121F2F008A8EE7 /* ActionButton.swift */,
+				88FF390B282494C700CFFC0E /* MyForm.swift */,
+				88FF390D282495C100CFFC0E /* MyTextField.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -261,11 +267,13 @@
 				8857469A27F3CD2F006830F5 /* ToDoSwiftUIApp.swift in Sources */,
 				8832289B281B3D02008A8EE7 /* StateObjectDemo.swift in Sources */,
 				88B7CB2828064502005B727E /* hw1hints.swift in Sources */,
+				88FF390C282494C700CFFC0E /* MyForm.swift in Sources */,
 				883228982818921B008A8EE7 /* StructuralIdentity.swift in Sources */,
 				88322863280F840A008A8EE7 /* AnimationDemo2.swift in Sources */,
 				88B7CB372808E41A005B727E /* View+Utility.swift in Sources */,
 				8832285F280F7E82008A8EE7 /* AnimationDemo.swift in Sources */,
 				8832289D281B4C46008A8EE7 /* StableOrUnstableID.swift in Sources */,
+				88FF390E282495C100CFFC0E /* MyTextField.swift in Sources */,
 				88B7CB3C2808EA9F005B727E /* ReminderGroupViewModel.swift in Sources */,
 				88322861280F8218008A8EE7 /* ProgressRingView.swift in Sources */,
 				88B7CB2B28064957005B727E /* Expand.swift in Sources */,

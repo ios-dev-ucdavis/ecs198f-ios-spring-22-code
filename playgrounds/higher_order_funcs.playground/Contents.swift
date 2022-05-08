@@ -1,40 +1,53 @@
 var nums = [10, 30, 20, 15, 8, 13, 25, 90, 45]
 
 // MARK: Use .sorted()
+nums.sorted()
 
 // MARK: Use .sorted(by)
+nums.sorted { a, b in
+    a > b
+}
 
 // MARK: Use shorthand closure
-//let sorted_nums = nums.sorted { $0 > $1 }
-//sorted_nums
+let sorted_nums = nums.sorted { $0 > $1 }
+sorted_nums
 
 // MARK: Use special function in .sorted(by)
+nums.sorted(by: >)
+nums.sorted(by: <)
 
-// public func >(_ lhs: Int, _ rhs: Int) -> Bool { }
+//public func >(_ lhs: Int, _ rhs: Int) -> Bool { }
 
 // MARK: Use .sorted(by) to achieve more complicated sort
 
 // Separate even and odd number
+nums.sorted { a, _ in
+    a % 2 == 0
+}
 
 
 // Separate even and odd number by increasing order
-//var evenAndOddIncreasing = nums.sorted { a, b in
-//    if a % 2 == 0 && b % 2 == 0 {
-//        return a < b
-//    } else if a % 2 != 0 && b % 2 != 0 {
-//        return a < b
-//    } else {
-//        return a % 2 == 0
-//    }
-//}
-//evenAndOddIncreasing
+var evenAndOddIncreasing = nums.sorted { a, b in
+    if a % 2 == 0 && b % 2 == 0 {
+        return a < b
+    } else if a % 2 != 0 && b % 2 != 0 {
+        return a < b
+    } else {
+        return a % 2 == 0
+    }
+}
+evenAndOddIncreasing
 
 // MARK: use .filter()
 // Take elements that even number
-
+nums.filter { value in
+    value % 2 == 0
+}
 
 // Take elements that larger than 20
-
+nums.filter { value in
+    value > 20
+}
 
 // Use key path in .filter
 struct DataEntry {
@@ -54,6 +67,7 @@ let dataEntries: [DataEntry] = {
     return array
 }()
 
+dataEntries.filter(\.flag)
 
 // MARK: Use .reduce()
 
@@ -63,6 +77,17 @@ var value1 = 0
 var value2 = 10
 
 // Want to get value1 = 10, value2 = 0, by calling swapValues(value1, value2)
+
+func swapValues(_ value1: inout Int, _ value2: inout Int) {
+    let temp = value1
+    value1 = value2
+    value2 = temp
+}
+
+swapValues(&value1, &value2)
+
+value1
+value2
 
 
 // Try to get the sum of all elements
@@ -75,8 +100,14 @@ for num in nums {
 count
 
 // reduce(into:)
+nums.reduce(into: 0) { partialResult, nextElement in
+    partialResult += nextElement
+}
 
 // reduce(:,:)
+nums.reduce(0) { partialResult, nextElement in
+    return partialResult + nextElement
+}
 
 
 // Define a sum() function on collection
