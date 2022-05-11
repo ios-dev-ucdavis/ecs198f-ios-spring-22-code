@@ -109,29 +109,61 @@ nums.reduce(0) { partialResult, nextElement in
     return partialResult + nextElement
 }
 
+nums
 
 // Define a sum() function on collection
 // For example, nums.sum()
 
+extension Collection where Element: AdditiveArithmetic {
+    func sum() -> Element {
+        self.reduce(Element.zero, +)
+    }
+}
 
+nums.sum()
+
+//dataEntries
 // More advanced usage.
-//dataEntries.reduce(0) { partialResult, nextElement in
-//    partialResult + (nextElement.flag ? nextElement.index : 0)
-//}
+dataEntries.reduce(0) { partialResult, nextElement in
+    partialResult + (nextElement.flag ? nextElement.index : 0)
+}
 
 // MARK: map
 
 // Used to convert an array of data to an array of data of other types or values
+nums
+nums.map { value in
+    value * 10
+}
+
+dataEntries.map { dataEntry in
+    dataEntry.index
+}
 
 
 // Use key path again
+dataEntries.map(\.index)
 
-
-
+dataEntries.map { (dataEntry: DataEntry) -> Int? in
+    if dataEntry.flag {
+        return dataEntry.index
+    } else {
+        return nil
+    }
+}
 
 
 // What if we don't want to nil here?
 // Use compactMap!
+
+dataEntries.compactMap { (dataEntry: DataEntry) -> Int? in
+    if dataEntry.flag {
+        return dataEntry.index
+    } else {
+        return nil
+    }
+}
+
 
 
 
@@ -144,33 +176,62 @@ let nestedNums = [
 ]
 
 // What if we want to add 1 to each element but return an 1d array?
-
+nestedNums.flatMap { nums in
+    nums.map({ $0 + 1})
+}
 
 
 // Chaining higher-order functions
 nums = [13, 15, 6, 89, 20, 10, 54]
 
-//let chained_vals = nums
-//.map {
-//    $0 * 3
-//}
-//.filter {
-//    $0 <= 50
-//}
-//.sorted(by: <)
-//.compactMap { value in
-//    value % 2 == 0 ? DataEntry(index: value, flag: true) : nil
-//}
+let chained_vals = nums
+.map {
+    $0 * 3
+}
+.filter {
+    $0 <= 50
+}
+.sorted(by: <)
+.compactMap { value in
+    value % 2 == 0 ? DataEntry(index: value, flag: true) : nil
+}
 
 //chained_vals
 
 // Try to implement filter!
 
-func myFilter(on data: [Int], _ isIncluded: (Int) -> Bool) -> [Int] { Array<Int>() }
+func myFilter(on data: [Int], _ isIncluded: (Int) -> Bool) -> [Int] {
+    var results = [Int]()
+    for element in data {
+        if isIncluded(element) {
+            results.append(element)
+        }
+    }
+    return results
+}
 
+nums
+myFilter(on: nums) { value in
+    value % 2 == 0
+}
 
 
 // Make filter function works on an array of any Type instead of just an array of Int
+
+func myFilter<Element>(on data: [Element], _ isIncluded: (Element) -> Bool) -> [Element] {
+    var results = [Element]()
+    for element in data {
+        if isIncluded(element) {
+            results.append(element)
+        }
+    }
+    return results
+}
+
+let doubles = [1.1, 2.2]
+myFilter(on: doubles) { element in
+    element < 1.3
+}
 
 
 let programming_languages = [
@@ -186,20 +247,40 @@ let programming_languages = [
 ]
 
 // Find all languages that start with "C"
-
+myFilter(on: programming_languages) { myStr in
+    myStr.hasPrefix("C")
+}
 
 // How to make it more native so we can just say programming_languages.myFilter()
+extension Array {
+    func myFilter(_ isIncluded: (Element) -> Bool) -> [Element] {
+        var results: [Element] = []
+        for element in self {
+            if isIncluded(element) {
+                results.append(element)
+            }
+        }
+        return results
+    }
+}
 
-
-//let extened_vals = programming_languages.myFilter { $0.hasPrefix("C") }
-//extened_vals
+let extened_vals = programming_languages.myFilter { $0.hasPrefix("C") }
+extened_vals
 
 
 // Recall the sum() we defined before.
 // Use sum on any collection. Don't have to be an array integer
+extension Collection {
+    func sum<T: AdditiveArithmetic>(
+        _ transform: (Element) throws -> T
+    ) rethrows -> T {
+        return try self.map(transform).sum()
+    }
+}
+
 dataEntries
 
-//dataEntries.sum { dataEntry in
-//    dataEntry.index
-//}
+dataEntries.sum { dataEntry in
+    dataEntry.index
+}
 
