@@ -1,10 +1,4 @@
-//
-//  Expand.swift
-//  ToDoSwiftUI
-//
-//  Created by Yibo Yan on 4/12/22.
-//
-
+import Foundation
 import SwiftUI
 
 enum ExpandDirection {
@@ -14,13 +8,13 @@ enum ExpandDirection {
 }
 
 struct Expand: ViewModifier {
-    var horizon: Bool = true
+    var horizontal: Bool = true
     var vertical: Bool = true
     
     init(_ direction: ExpandDirection = .all) {
         switch (direction) {
         case .vertical:
-            self.horizon = false
+            self.horizontal = false
         case .horizontal:
             self.vertical = false
         case .all:
@@ -30,7 +24,7 @@ struct Expand: ViewModifier {
     
     func body(content: Content) -> some View {
         content
-            .frame(maxWidth: self.horizon ? .infinity : nil)
+            .frame(maxWidth: self.horizontal ? .infinity : nil)
             .frame(maxHeight: self.vertical ? .infinity : nil)
     }
 }

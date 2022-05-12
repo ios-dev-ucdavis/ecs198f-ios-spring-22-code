@@ -1,14 +1,15 @@
-//
-//  AnyTransition+Customized.swift
-//  ToDoSwiftUI
-//
-//  Created by Yibo Yan on 4/21/22.
-//
-
 import SwiftUI
 
 extension AnyTransition {
+    static var drawViewOutTransition: AnyTransition {
+        let insertion = AnyTransition.move(edge: .bottom)
+        let removal = AnyTransition.move(edge: .bottom)
+        return .asymmetric(insertion: insertion, removal: removal)
+    }
+    
     static var floatingMenuPopup: AnyTransition {
-        AnyTransition.opacity.combined(with: .scale).combined(with: move(edge: .trailing))
+        let insertion = AnyTransition.opacity.combined(with: .scale).combined(with: .move(edge: .trailing))
+        let removal = AnyTransition.opacity.combined(with: .scale).combined(with: .move(edge: .trailing))
+        return .asymmetric(insertion: insertion, removal: removal)
     }
 }
