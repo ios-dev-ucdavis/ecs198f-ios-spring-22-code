@@ -1,6 +1,7 @@
 import SwiftUI
 
 struct ReminderView: View {
+    @EnvironmentObject var actionButtonVM: ActionButtonViewModel
     @ObservedObject var reminderGroupVM: ReminderGroupViewModel
     
     var groupName: String {
@@ -27,7 +28,7 @@ struct ReminderView: View {
             LazyVGrid(columns: columns, spacing: 15) {
                 ForEach(reminderGroupVM.reminderIds, id: \.self) { reminderId in
                     let reminderVM = ReminderViewModel(reminderId, previewNum: 4)
-                    
+
                     NavigationLink {
                         DetailView(reminderVM)
                             .environmentObject(reminderGroupVM)
@@ -41,6 +42,19 @@ struct ReminderView: View {
         }
         .background(Color.secondarySystemBackground)
         .navigationTitle(groupName)
+        .onAppear {
+            prepareReminerViewActionButtonItems()
+        }
+    }
+}
+
+extension ReminderView {
+    func prepareReminerViewActionButtonItems() {
+        actionButtonVM.setupActionButtonItems(with: [
+            ActionButtonItem(labelName: "note.text.badge.plus", {
+                print("Add a Reminder.")
+            })
+        ])
     }
 }
 
@@ -56,7 +70,7 @@ struct ReminderView_Previews: PreviewProvider {
             ReminderView(reminderGroupId)
                 .environment(\.colorScheme, .dark)
                 .environment(\.font, .title)
-            
+                
         }
     }
 }

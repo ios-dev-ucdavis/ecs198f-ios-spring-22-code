@@ -9,9 +9,12 @@ import SwiftUI
 
 @main
 struct ToDoSwiftUIApp: App {
+    @StateObject var settingsVM = SettingsViewModel()
+    
     var body: some Scene {
         WindowGroup {
             GroupView()
+                .environmentObject(settingsVM)
         }
     }
 }

@@ -1,6 +1,6 @@
 import Foundation
-import Combine
 import SwiftUI
+import Combine
 
 class ReminderGroupViewModel: ObservableObject {
     @Published var reminderGroup = ReminderGroup()
@@ -47,6 +47,18 @@ class ReminderGroupViewModel: ObservableObject {
         reminder.groupId = reminderGroupId
         ReminderRepository.instance.create(reminder)
         self.reminderGroup.addReminder(reminder)
+    }
+    
+    // New function for updating a reminder
+    func updateReminder(_ reminder: Reminder ) {
+        ReminderRepository.instance.update(reminder.id, with: reminder)
+    }
+    
+    // New function for removing a reminder
+    func removeReminder(_ reminder: Reminder) {
+        withAnimation(.bouncyAnimation.delay(1)) {
+            self.reminderGroup.removeReminder(reminder)
+        }
     }
 }
 

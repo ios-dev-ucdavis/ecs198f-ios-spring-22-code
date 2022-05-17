@@ -1,18 +1,20 @@
 import SwiftUI
 
 struct TaskRow: View {
-    var step: Reminder.Step
-    
-    var body: some View {
+	var step: Reminder.Step
+	
+	var body: some View {
         Text(step.content)
             .font(.system(size: 20))
-    }
+	}
 }
 
 struct DetailView: View {
-    @EnvironmentObject var reminderGroupVM: ReminderGroupViewModel
+	@EnvironmentObject var reminderGroupVM: ReminderGroupViewModel
+    @EnvironmentObject var actionButtonVM: ActionButtonViewModel
     @ObservedObject var reminderVM: ReminderViewModel
-    
+    @Environment(\.dismiss) var dismiss
+
     var reminder: Reminder {
         reminderVM.reminder
     }
@@ -20,25 +22,25 @@ struct DetailView: View {
     var stepProgress: Double {
         reminderVM.stepProgress
     }
-    
+
     init(_ reminderVM: ReminderViewModel) {
         self.reminderVM = reminderVM
     }
-    
+	
     var body: some View {
-        VStack {
-            ScrollView {
-                Spacer().frame(height: 15)
-                
+		VStack {
+			ScrollView {
+				Spacer().frame(height: 15)
+				
                 VStack {
                     ForEach(reminder.steps) { step in
                         HStack {
                             Image(systemName: step.finished
                                   ? "checkmark.circle.fill" : "circle.dashed")
-                            .onTapGesture {
-                                reminderVM.toggleStep(for: step)
-                            }
-                            
+                                .onTapGesture {
+                                    reminderVM.toggleStep(for: step)
+                                }
+
                             TaskRow(step: step)
                                 .onTapGesture {
                                     reminderVM.toggleExpanded(for: step)
@@ -50,9 +52,9 @@ struct DetailView: View {
                     }
                 }
                 .padding(.horizontal)
-            }
-            .navigationTitle(reminder.title)
-        }
+			}
+			.navigationTitle(reminder.title)
+		}
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(Color.secondarySystemBackground)
         .toolbar {
@@ -61,6 +63,23 @@ struct DetailView: View {
                     .frame(width: 20, height: 20)
             }
         }
+        .onAppear() {
+            prepareDetailViewActionButtonItems()
+        }
+	}
+}
+
+extension DetailView {
+    func prepareDetailViewActionButtonItems() {
+        actionButtonVM.setupActionButtonItems(with: [
+            ActionButtonItem(labelName: "square.and.pencil", {
+                print("Edit this Reminder.")
+            }),
+            ActionButtonItem(labelName: "trash", {
+                self.reminderGroupVM.removeReminder(reminderVM.reminder)
+                dismiss()
+            })
+        ])
     }
 }
 
