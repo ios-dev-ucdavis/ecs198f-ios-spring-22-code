@@ -1,12 +1,19 @@
 //
 //  Color+Utility.swift
-//  ToDoSwiftUI
-//
-//  Created by Yibo Yan on 4/12/22.
 //
 
 import SwiftUI
 
 extension Color {
-    static let systemBackground = Color("CardBgColor")
+    static var systemBackground: Color {
+        Color("CardBgColor")
+    }
+    
+    static var secondarySystemBackground: Color {
+        Color("BgColor")
+    }
+    
+    static var systemGray: Color {
+        Color(UIColor.systemGray4)
+    }
 }

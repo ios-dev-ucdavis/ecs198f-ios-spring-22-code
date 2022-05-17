@@ -1,11 +1,3 @@
-//
-//  View+Utility.swift
-//  ToDoSwiftUI
-//
-//  Created by Yibo Yan on 4/14/22.
-//
-
-import Foundation
 import SwiftUI
 
 extension View {
