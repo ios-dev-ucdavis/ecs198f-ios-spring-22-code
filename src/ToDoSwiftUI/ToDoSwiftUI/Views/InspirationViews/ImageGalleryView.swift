@@ -48,6 +48,9 @@ struct ImageGalleryView: View {
                 .padding([.horizontal, .bottom])
             }
         }
+        .task {
+            await imageGalleryVM.loadEditorialImages()
+        }
     }
     
 //    @ViewBuilder

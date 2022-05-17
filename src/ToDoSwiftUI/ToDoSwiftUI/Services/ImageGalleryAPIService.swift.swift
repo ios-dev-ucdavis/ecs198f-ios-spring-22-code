@@ -24,16 +24,35 @@ class ImageGalleryAPIService {
         "&client_id=\(client_id)"
     }
     
-//    static func getEditorialImages() async -> Images? {
-//        await fetchResult(from: endpointQuery)
-//    }
-//    
-//    static func getRandomImages() async -> Images? {
-//        await fetchResult(from: randomEndpointQuery)
-//    }
-//    
-//    static func fetchResult(from endpoint: String) async -> Images? {
-//        // TODO: Finish this.
-//        return nil
-//    }
+    static func getEditorialImages() async -> Images? {
+        await fetchResult(from: endpointQuery)
+    }
+    
+    static func getRandomImages() async -> Images? {
+        await fetchResult(from: randomEndpointQuery)
+    }
+    
+    static func fetchResult(from endpoint: String) async -> Images? {
+        guard let validEndpoint = URL(string: endpoint) else {
+            print("Invalid URL.")
+            return nil
+        }
+        
+        guard let (data, response) = try? await URLSession.shared.data(from: validEndpoint) else {
+            print("Failed to get images.")
+            return nil
+        }
+        
+        guard let httpResponse = response as? HTTPURLResponse, httpResponse.statusCode == 200 else {
+            return nil
+        }
+        
+        do {
+            return try JSONDecoder().decode(Images.self, from: data)
+        } catch {
+            print(error)
+        }
+        
+        return nil
+    }
 }
