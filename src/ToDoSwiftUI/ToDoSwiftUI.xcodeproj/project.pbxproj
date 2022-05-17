@@ -18,7 +18,6 @@
 		8855642D282DA2DC00A6670A /* ProgressRingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88556421282DA2DC00A6670A /* ProgressRingView.swift */; };
 		8855642E282DA2DC00A6670A /* InspirationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88556423282DA2DC00A6670A /* InspirationView.swift */; };
 		8855642F282DA2DC00A6670A /* ImageGalleryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88556424282DA2DC00A6670A /* ImageGalleryView.swift */; };
-		88556430282DA2DC00A6670A /* ReminderCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88556426282DA2DC00A6670A /* ReminderCardView.swift */; };
 		88556433282DA2DC00A6670A /* GroupCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88556429282DA2DC00A6670A /* GroupCardView.swift */; };
 		88556435282DA2DC00A6670A /* BadgeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8855642B282DA2DC00A6670A /* BadgeView.swift */; };
 		88556439282DA33800A6670A /* ImageGalleryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88556436282DA33800A6670A /* ImageGalleryViewModel.swift */; };
@@ -41,6 +40,8 @@
 		885564A12834464400A6670A /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 885564A02834464400A6670A /* Settings.swift */; };
 		885564A32834474A00A6670A /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 885564A22834474A00A6670A /* DetailView.swift */; };
 		885564A52834475800A6670A /* ReminderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 885564A42834475800A6670A /* ReminderView.swift */; };
+		885564A7283453C900A6670A /* ReminderCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 885564A6283453C900A6670A /* ReminderCardView.swift */; };
+		885564A9283453E700A6670A /* CompletionMarker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 885564A8283453E700A6670A /* CompletionMarker.swift */; };
 		8857469A27F3CD2F006830F5 /* ToDoSwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8857469927F3CD2F006830F5 /* ToDoSwiftUIApp.swift */; };
 		8857469E27F3CD30006830F5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8857469D27F3CD30006830F5 /* Assets.xcassets */; };
 		885746A127F3CD30006830F5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 885746A027F3CD30006830F5 /* Preview Assets.xcassets */; };
@@ -67,7 +68,6 @@
 		88556421282DA2DC00A6670A /* ProgressRingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressRingView.swift; sourceTree = "<group>"; };
 		88556423282DA2DC00A6670A /* InspirationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InspirationView.swift; sourceTree = "<group>"; };
 		88556424282DA2DC00A6670A /* ImageGalleryView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageGalleryView.swift; sourceTree = "<group>"; };
-		88556426282DA2DC00A6670A /* ReminderCardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReminderCardView.swift; sourceTree = "<group>"; };
 		88556429282DA2DC00A6670A /* GroupCardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupCardView.swift; sourceTree = "<group>"; };
 		8855642B282DA2DC00A6670A /* BadgeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BadgeView.swift; sourceTree = "<group>"; };
 		88556436282DA33800A6670A /* ImageGalleryViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageGalleryViewModel.swift; sourceTree = "<group>"; };
@@ -90,6 +90,8 @@
 		885564A02834464400A6670A /* Settings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		885564A22834474A00A6670A /* DetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		885564A42834475800A6670A /* ReminderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReminderView.swift; sourceTree = "<group>"; };
+		885564A6283453C900A6670A /* ReminderCardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReminderCardView.swift; sourceTree = "<group>"; };
+		885564A8283453E700A6670A /* CompletionMarker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompletionMarker.swift; sourceTree = "<group>"; };
 		8857469627F3CD2F006830F5 /* ToDoSwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToDoSwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8857469927F3CD2F006830F5 /* ToDoSwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoSwiftUIApp.swift; sourceTree = "<group>"; };
 		8857469D27F3CD30006830F5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -150,7 +152,7 @@
 				885564982834458900A6670A /* GroupView.swift */,
 				88556429282DA2DC00A6670A /* GroupCardView.swift */,
 				885564A42834475800A6670A /* ReminderView.swift */,
-				88556426282DA2DC00A6670A /* ReminderCardView.swift */,
+				885564A6283453C900A6670A /* ReminderCardView.swift */,
 				885564A22834474A00A6670A /* DetailView.swift */,
 				8855649A2834459400A6670A /* SettingsView.swift */,
 			);
@@ -279,6 +281,7 @@
 				8855642B282DA2DC00A6670A /* BadgeView.swift */,
 				88556420282DA2DC00A6670A /* CircularProgressView.swift */,
 				88556421282DA2DC00A6670A /* ProgressRingView.swift */,
+				885564A8283453E700A6670A /* CompletionMarker.swift */,
 				8855649C283445D000A6670A /* ActionButton.swift */,
 				88FF390B282494C700CFFC0E /* MyForm.swift */,
 				88FF390D282495C100CFFC0E /* MyTextField.swift */,
@@ -394,8 +397,9 @@
 				885564992834458900A6670A /* GroupView.swift in Sources */,
 				883228982818921B008A8EE7 /* StructuralIdentity.swift in Sources */,
 				8855644E282DA40E00A6670A /* IORepository.swift in Sources */,
-				88556430282DA2DC00A6670A /* ReminderCardView.swift in Sources */,
+				885564A9283453E700A6670A /* CompletionMarker.swift in Sources */,
 				88556435282DA2DC00A6670A /* BadgeView.swift in Sources */,
+				885564A7283453C900A6670A /* ReminderCardView.swift in Sources */,
 				88322863280F840A008A8EE7 /* AnimationDemo2.swift in Sources */,
 				88B7CB372808E41A005B727E /* View+Utility.swift in Sources */,
 				8832285F280F7E82008A8EE7 /* AnimationDemo.swift in Sources */,
