@@ -1,13 +1,14 @@
-//
-//  ActionButton.swift
-//  ToDoSwiftUI
-//
-//  Created by Yibo Yan on 4/21/22.
-//
-
 import SwiftUI
 
-struct ActionButtonItem: View {
+struct ActionButtonItem: View, Identifiable, Equatable {
+    static func == (lhs: ActionButtonItem, rhs: ActionButtonItem) -> Bool {
+        lhs.id == rhs.id
+    }
+    
+    var id: Int {
+        labelName.hashValue
+    }
+    
     var action: () -> Void
     var labelName: String
     
@@ -22,23 +23,21 @@ struct ActionButtonItem: View {
         } label: {
             Image(systemName: labelName)
         }
+        .transition(.scale)
     }
 }
 
 struct ActionButtonFlyoutPanel: View {
+    @EnvironmentObject var actionButtonVM: ActionButtonViewModel
     @Binding var showMore: Bool
     
     var body: some View {
         HStack(spacing: 20) {
-            ActionButtonItem(labelName: "folder.badge.plus") {
-                print("Tapped on icon folder.badge.plus")
+            ForEach(actionButtonVM.actionButtonItems) { item in
+                item
             }
             
-            ActionButtonItem(labelName: "xmark") {
-                withAnimation(.bouncyAnimation) {
-                    showMore.toggle()
-                }
-            }
+            actionButtonVM.settingsActionButton
         }
         .foregroundColor(.white)
         .padding()
@@ -49,13 +48,19 @@ struct ActionButtonFlyoutPanel: View {
 }
 
 struct ActionButton: View {
-    @State var showMore = false
+    @ObservedObject var actionButtonVM: ActionButtonViewModel
+    @State private var showMore = false
+    
+    init(_ actionButtonVM: ActionButtonViewModel) {
+        self.actionButtonVM = actionButtonVM
+    }
     
     @ViewBuilder
     var mainBody: some View {
         if showMore {
             ActionButtonFlyoutPanel(showMore: $showMore)
                 .transition(.floatingMenuPopup)
+                .environmentObject(actionButtonVM)
         }
         
         Image(systemName: "plus")
@@ -81,14 +86,20 @@ struct ActionButton: View {
                 mainBody
             }
         }
+        .animation(.default, value: actionButtonVM.actionButtonItems)
+        .shadow(radius: 4)
         .font(.system(size: 22))
         .padding()
     }
 }
 
 struct ActionButton_Previews: PreviewProvider {
+    static let vm = ActionButtonViewModel()
+    
     static var previews: some View {
-        ActionButton()
+        ActionButton(vm)
+        
         ActionButtonFlyoutPanel(showMore: .constant(true))
+            .environmentObject(vm)
     }
 }

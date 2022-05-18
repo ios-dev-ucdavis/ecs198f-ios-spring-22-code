@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		8832285F280F7E82008A8EE7 /* AnimationDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8832285E280F7E82008A8EE7 /* AnimationDemo.swift */; };
 		88322863280F840A008A8EE7 /* AnimationDemo2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88322862280F840A008A8EE7 /* AnimationDemo2.swift */; };
-		8832289028121F2F008A8EE7 /* ActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8832288F28121F2F008A8EE7 /* ActionButton.swift */; };
 		88322892281221A2008A8EE7 /* Animation+Customized.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88322891281221A2008A8EE7 /* Animation+Customized.swift */; };
 		883228942812247D008A8EE7 /* AnyTransition+Customized.swift in Sources */ = {isa = PBXBuildFile; fileRef = 883228932812247D008A8EE7 /* AnyTransition+Customized.swift */; };
 		883228982818921B008A8EE7 /* StructuralIdentity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 883228972818921B008A8EE7 /* StructuralIdentity.swift */; };
@@ -19,11 +18,7 @@
 		8855642D282DA2DC00A6670A /* ProgressRingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88556421282DA2DC00A6670A /* ProgressRingView.swift */; };
 		8855642E282DA2DC00A6670A /* InspirationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88556423282DA2DC00A6670A /* InspirationView.swift */; };
 		8855642F282DA2DC00A6670A /* ImageGalleryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88556424282DA2DC00A6670A /* ImageGalleryView.swift */; };
-		88556430282DA2DC00A6670A /* ReminderCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88556426282DA2DC00A6670A /* ReminderCardView.swift */; };
-		88556431282DA2DC00A6670A /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88556427282DA2DC00A6670A /* DetailView.swift */; };
-		88556432282DA2DC00A6670A /* ReminderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88556428282DA2DC00A6670A /* ReminderView.swift */; };
 		88556433282DA2DC00A6670A /* GroupCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88556429282DA2DC00A6670A /* GroupCardView.swift */; };
-		88556434282DA2DC00A6670A /* GroupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8855642A282DA2DC00A6670A /* GroupView.swift */; };
 		88556435282DA2DC00A6670A /* BadgeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8855642B282DA2DC00A6670A /* BadgeView.swift */; };
 		88556439282DA33800A6670A /* ImageGalleryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88556436282DA33800A6670A /* ImageGalleryViewModel.swift */; };
 		8855643A282DA33800A6670A /* ReminderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88556437282DA33800A6670A /* ReminderViewModel.swift */; };
@@ -37,6 +32,16 @@
 		8855644B282DA3E300A6670A /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8855644A282DA3E300A6670A /* UserData.swift */; };
 		8855644E282DA40E00A6670A /* IORepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8855644D282DA40E00A6670A /* IORepository.swift */; };
 		88556450282DA45300A6670A /* Progressable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8855644F282DA45300A6670A /* Progressable.swift */; };
+		885564972834456700A6670A /* ActionButtonViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 885564962834456700A6670A /* ActionButtonViewModel.swift */; };
+		885564992834458900A6670A /* GroupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 885564982834458900A6670A /* GroupView.swift */; };
+		8855649B2834459400A6670A /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8855649A2834459400A6670A /* SettingsView.swift */; };
+		8855649D283445D000A6670A /* ActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8855649C283445D000A6670A /* ActionButton.swift */; };
+		8855649F283445EF00A6670A /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8855649E283445EF00A6670A /* SettingsViewModel.swift */; };
+		885564A12834464400A6670A /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 885564A02834464400A6670A /* Settings.swift */; };
+		885564A32834474A00A6670A /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 885564A22834474A00A6670A /* DetailView.swift */; };
+		885564A52834475800A6670A /* ReminderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 885564A42834475800A6670A /* ReminderView.swift */; };
+		885564A7283453C900A6670A /* ReminderCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 885564A6283453C900A6670A /* ReminderCardView.swift */; };
+		885564A9283453E700A6670A /* CompletionMarker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 885564A8283453E700A6670A /* CompletionMarker.swift */; };
 		8857469A27F3CD2F006830F5 /* ToDoSwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8857469927F3CD2F006830F5 /* ToDoSwiftUIApp.swift */; };
 		8857469E27F3CD30006830F5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8857469D27F3CD30006830F5 /* Assets.xcassets */; };
 		885746A127F3CD30006830F5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 885746A027F3CD30006830F5 /* Preview Assets.xcassets */; };
@@ -54,7 +59,6 @@
 /* Begin PBXFileReference section */
 		8832285E280F7E82008A8EE7 /* AnimationDemo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimationDemo.swift; sourceTree = "<group>"; };
 		88322862280F840A008A8EE7 /* AnimationDemo2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimationDemo2.swift; sourceTree = "<group>"; };
-		8832288F28121F2F008A8EE7 /* ActionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionButton.swift; sourceTree = "<group>"; };
 		88322891281221A2008A8EE7 /* Animation+Customized.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Animation+Customized.swift"; sourceTree = "<group>"; };
 		883228932812247D008A8EE7 /* AnyTransition+Customized.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AnyTransition+Customized.swift"; sourceTree = "<group>"; };
 		883228972818921B008A8EE7 /* StructuralIdentity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StructuralIdentity.swift; sourceTree = "<group>"; };
@@ -64,11 +68,7 @@
 		88556421282DA2DC00A6670A /* ProgressRingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressRingView.swift; sourceTree = "<group>"; };
 		88556423282DA2DC00A6670A /* InspirationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InspirationView.swift; sourceTree = "<group>"; };
 		88556424282DA2DC00A6670A /* ImageGalleryView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageGalleryView.swift; sourceTree = "<group>"; };
-		88556426282DA2DC00A6670A /* ReminderCardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReminderCardView.swift; sourceTree = "<group>"; };
-		88556427282DA2DC00A6670A /* DetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
-		88556428282DA2DC00A6670A /* ReminderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReminderView.swift; sourceTree = "<group>"; };
 		88556429282DA2DC00A6670A /* GroupCardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupCardView.swift; sourceTree = "<group>"; };
-		8855642A282DA2DC00A6670A /* GroupView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupView.swift; sourceTree = "<group>"; };
 		8855642B282DA2DC00A6670A /* BadgeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BadgeView.swift; sourceTree = "<group>"; };
 		88556436282DA33800A6670A /* ImageGalleryViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageGalleryViewModel.swift; sourceTree = "<group>"; };
 		88556437282DA33800A6670A /* ReminderViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReminderViewModel.swift; sourceTree = "<group>"; };
@@ -82,6 +82,16 @@
 		8855644A282DA3E300A6670A /* UserData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
 		8855644D282DA40E00A6670A /* IORepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IORepository.swift; sourceTree = "<group>"; };
 		8855644F282DA45300A6670A /* Progressable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Progressable.swift; sourceTree = "<group>"; };
+		885564962834456700A6670A /* ActionButtonViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActionButtonViewModel.swift; sourceTree = "<group>"; };
+		885564982834458900A6670A /* GroupView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupView.swift; sourceTree = "<group>"; };
+		8855649A2834459400A6670A /* SettingsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		8855649C283445D000A6670A /* ActionButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActionButton.swift; sourceTree = "<group>"; };
+		8855649E283445EF00A6670A /* SettingsViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
+		885564A02834464400A6670A /* Settings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
+		885564A22834474A00A6670A /* DetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		885564A42834475800A6670A /* ReminderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReminderView.swift; sourceTree = "<group>"; };
+		885564A6283453C900A6670A /* ReminderCardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReminderCardView.swift; sourceTree = "<group>"; };
+		885564A8283453E700A6670A /* CompletionMarker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompletionMarker.swift; sourceTree = "<group>"; };
 		8857469627F3CD2F006830F5 /* ToDoSwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToDoSwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8857469927F3CD2F006830F5 /* ToDoSwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoSwiftUIApp.swift; sourceTree = "<group>"; };
 		8857469D27F3CD30006830F5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -139,11 +149,12 @@
 		88556425282DA2DC00A6670A /* MainViews */ = {
 			isa = PBXGroup;
 			children = (
-				88556426282DA2DC00A6670A /* ReminderCardView.swift */,
-				88556427282DA2DC00A6670A /* DetailView.swift */,
-				88556428282DA2DC00A6670A /* ReminderView.swift */,
+				885564982834458900A6670A /* GroupView.swift */,
 				88556429282DA2DC00A6670A /* GroupCardView.swift */,
-				8855642A282DA2DC00A6670A /* GroupView.swift */,
+				885564A42834475800A6670A /* ReminderView.swift */,
+				885564A6283453C900A6670A /* ReminderCardView.swift */,
+				885564A22834474A00A6670A /* DetailView.swift */,
+				8855649A2834459400A6670A /* SettingsView.swift */,
 			);
 			path = MainViews;
 			sourceTree = "<group>";
@@ -254,8 +265,10 @@
 			children = (
 				88556436282DA33800A6670A /* ImageGalleryViewModel.swift */,
 				88556437282DA33800A6670A /* ReminderViewModel.swift */,
-				88556438282DA33800A6670A /* RootRepositoryViewModel.swift */,
 				88B7CB3B2808EA9F005B727E /* ReminderGroupViewModel.swift */,
+				88556438282DA33800A6670A /* RootRepositoryViewModel.swift */,
+				8855649E283445EF00A6670A /* SettingsViewModel.swift */,
+				885564962834456700A6670A /* ActionButtonViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -263,12 +276,13 @@
 		88B7CB392808EA34005B727E /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				88556422282DA2DC00A6670A /* InspirationViews */,
 				88556425282DA2DC00A6670A /* MainViews */,
+				88556422282DA2DC00A6670A /* InspirationViews */,
 				8855642B282DA2DC00A6670A /* BadgeView.swift */,
 				88556420282DA2DC00A6670A /* CircularProgressView.swift */,
 				88556421282DA2DC00A6670A /* ProgressRingView.swift */,
-				8832288F28121F2F008A8EE7 /* ActionButton.swift */,
+				885564A8283453E700A6670A /* CompletionMarker.swift */,
+				8855649C283445D000A6670A /* ActionButton.swift */,
 				88FF390B282494C700CFFC0E /* MyForm.swift */,
 				88FF390D282495C100CFFC0E /* MyTextField.swift */,
 			);
@@ -281,6 +295,7 @@
 				885746AD27FFAD69006830F5 /* ReminderGroup.swift */,
 				8855643E282DA36F00A6670A /* ImageGallery.swift */,
 				8855643F282DA36F00A6670A /* Reminder.swift */,
+				885564A02834464400A6670A /* Settings.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -358,9 +373,9 @@
 				8855644B282DA3E300A6670A /* UserData.swift in Sources */,
 				8855643A282DA33800A6670A /* ReminderViewModel.swift in Sources */,
 				88322892281221A2008A8EE7 /* Animation+Customized.swift in Sources */,
-				88556434282DA2DC00A6670A /* GroupView.swift in Sources */,
 				88556445282DA37C00A6670A /* ReminderGroupRepository.swift in Sources */,
 				88B7CB232806404C005B727E /* Color+Utility.swift in Sources */,
+				885564A32834474A00A6670A /* DetailView.swift in Sources */,
 				885746AE27FFAD69006830F5 /* ReminderGroup.swift in Sources */,
 				88556449282DA39D00A6670A /* ImageGalleryAPIService.swift.swift in Sources */,
 				88B7CB2528064330005B727E /* String+Utility.swift in Sources */,
@@ -369,24 +384,28 @@
 				88556446282DA37C00A6670A /* ReminderRepository.swift in Sources */,
 				8855643B282DA33800A6670A /* RootRepositoryViewModel.swift in Sources */,
 				8832289B281B3D02008A8EE7 /* StateObjectDemo.swift in Sources */,
+				885564A52834475800A6670A /* ReminderView.swift in Sources */,
 				88B7CB2828064502005B727E /* hw1hints.swift in Sources */,
+				885564972834456700A6670A /* ActionButtonViewModel.swift in Sources */,
+				8855649F283445EF00A6670A /* SettingsViewModel.swift in Sources */,
 				8855642D282DA2DC00A6670A /* ProgressRingView.swift in Sources */,
-				88556432282DA2DC00A6670A /* ReminderView.swift in Sources */,
 				88FF390C282494C700CFFC0E /* MyForm.swift in Sources */,
 				88556450282DA45300A6670A /* Progressable.swift in Sources */,
 				8855642E282DA2DC00A6670A /* InspirationView.swift in Sources */,
 				8855642C282DA2DC00A6670A /* CircularProgressView.swift in Sources */,
+				8855649B2834459400A6670A /* SettingsView.swift in Sources */,
+				885564992834458900A6670A /* GroupView.swift in Sources */,
 				883228982818921B008A8EE7 /* StructuralIdentity.swift in Sources */,
 				8855644E282DA40E00A6670A /* IORepository.swift in Sources */,
-				88556430282DA2DC00A6670A /* ReminderCardView.swift in Sources */,
+				885564A9283453E700A6670A /* CompletionMarker.swift in Sources */,
 				88556435282DA2DC00A6670A /* BadgeView.swift in Sources */,
+				885564A7283453C900A6670A /* ReminderCardView.swift in Sources */,
 				88322863280F840A008A8EE7 /* AnimationDemo2.swift in Sources */,
 				88B7CB372808E41A005B727E /* View+Utility.swift in Sources */,
 				8832285F280F7E82008A8EE7 /* AnimationDemo.swift in Sources */,
 				8832289D281B4C46008A8EE7 /* StableOrUnstableID.swift in Sources */,
 				88556433282DA2DC00A6670A /* GroupCardView.swift in Sources */,
 				8855643D282DA35A00A6670A /* View+Progressable.swift in Sources */,
-				88556431282DA2DC00A6670A /* DetailView.swift in Sources */,
 				88FF390E282495C100CFFC0E /* MyTextField.swift in Sources */,
 				88B7CB3C2808EA9F005B727E /* ReminderGroupViewModel.swift in Sources */,
 				88556440282DA36F00A6670A /* ImageGallery.swift in Sources */,
@@ -394,7 +413,8 @@
 				8855642F282DA2DC00A6670A /* ImageGalleryView.swift in Sources */,
 				88B7CB2B28064957005B727E /* Expand.swift in Sources */,
 				883228942812247D008A8EE7 /* AnyTransition+Customized.swift in Sources */,
-				8832289028121F2F008A8EE7 /* ActionButton.swift in Sources */,
+				885564A12834464400A6670A /* Settings.swift in Sources */,
+				8855649D283445D000A6670A /* ActionButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,6 +1,7 @@
 import SwiftUI
 
 struct ReminderCardView: View {
+    @EnvironmentObject var settingsVM: SettingsViewModel
     @ObservedObject private var reminderVM: ReminderViewModel
     
     private var reminder: Reminder {
@@ -10,7 +11,7 @@ struct ReminderCardView: View {
     private var title: String {
         reminder.title
     }
-    
+
     private var steps: [Reminder.Step] {
         reminder.steps
     }
@@ -26,7 +27,7 @@ struct ReminderCardView: View {
     init(_ reminderVM: ReminderViewModel) {
         self.reminderVM = reminderVM
     }
-    
+
     var body: some View {
         VStack {
             VStack(alignment: .leading, spacing: 2) {
@@ -40,7 +41,13 @@ struct ReminderCardView: View {
                     
                     Spacer()
                     
-                    completionMarker
+                    CompletionMarker(
+                        completed: $reminderVM.reminder.finished,
+                        iconSize: viewConstant.completeIconSize
+                    ) {
+                        // Function that will be executed when tap happens.
+                        self.reminderVM.toggleFinish()
+                    }
                 }
                 
                 Group {
@@ -57,9 +64,8 @@ struct ReminderCardView: View {
                 .multilineTextAlignment(.leading)
                 .font(.caption)
                 .foregroundColor(.gray)
-                
             }
-            
+                
             allSteps
         }
         .padding()
@@ -71,44 +77,21 @@ struct ReminderCardView: View {
             cardCornerRadius: viewConstant.cardCornerRadius,
             strokeWidth: viewConstant.strokeWidth,
             stepProgress: self.stepProgress,
-            show: true
+            show: settingsVM.showProgressRing
         )
         .scaleEffect(reminder.finished ? 0.95 : 1)
         .animation(.default, value: reminder.finished)
     }
     
-    var completionMarker: some View {
-        Group {
-            if reminder.finished {
-                Image(systemName: "checkmark.seal.fill")
-                    .resizable()
-                    .foregroundColor(.green)
-            } else {
-                Image(systemName: "circle.dashed")
-                    .resizable()
-                    .foregroundColor(.gray)
-            }
-        }
-        .frame(
-            width: viewConstant.completeIconSize.width,
-            height: viewConstant.completeIconSize.height
-        )
-        .onTapGesture {
-            // TODO: VM
-            reminderVM.toggleFinish()
-            //            reminder.toggleFinish()
-        }
-    }
-    
     @ViewBuilder var allSteps: some View {
-        if !self.steps.isEmpty {
+        if !self.steps.isEmpty && settingsVM.showStepsPreview {
             VStack {
-                ForEach(self.steps) { step in
+                ForEach(
+                    steps.prefix(settingsVM.maxNumOfStepsPreview)
+                ) { step in
                     stepEntryBuilder(with: step)
                         .onTapGesture {
-                            // TODO: VM
                             reminderVM.toggleStep(for: step)
-                            //                            reminder.toggleStep(for: step)
                         }
                 }
             }

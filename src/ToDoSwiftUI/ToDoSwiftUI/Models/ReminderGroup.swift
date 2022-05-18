@@ -27,6 +27,14 @@ struct ReminderGroup: Identifiable {
         self.reminders.append(reminder.id)
     }
     
+    // New function for removing reminder
+    mutating func removeReminder(_ reminder: Reminder) {
+        guard let index = self.reminders.firstIndex(of: reminder.id) else {
+            return
+        }
+        self.reminders.remove(at: index)
+    }
+    
     // MARK: Newly added helper function for generating fake reminder groups
     static func getFakeReminderGroup(named name: String? = nil, with note: String? = nil) -> ReminderGroup {
         var reminderGroup = ReminderGroup()
