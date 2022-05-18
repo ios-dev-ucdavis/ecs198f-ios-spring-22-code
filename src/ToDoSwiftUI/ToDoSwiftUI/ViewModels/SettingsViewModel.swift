@@ -11,22 +11,30 @@ import SwiftUI
 
 class SettingsViewModel: ObservableObject {
     @Published var settings = Settings()
+//    @AppStorage("showStepsPreview") var showStepsPreview = false
     
     private let settingsFileKey = "SwiftUIToDoSettingsFile"
     
-    init() { }
+    init() {
+        loadSettings()
+    }
     
     func loadSettings() {
-        
+        let settingsJson = UserDefaults.standard.object(forKey: settingsFileKey) as? Data
+        self.settings = Settings(json: settingsJson) ?? Settings()
     }
     
     func saveSettings(with newSettings: Settings? = nil) {
-        
+        if let newSettings = newSettings {
+            UserDefaults.standard.set(newSettings.json, forKey: settingsFileKey)
+        } else {
+            UserDefaults.standard.set(self.settings.json, forKey: settingsFileKey)
+        }
     }
     
     func removeSettings() {
-//        self.settings = Settings()
-//        UserDefaults.standard.removeObject(forKey: self.settingsFileKey)
+        self.settings = Settings()
+        UserDefaults.standard.removeObject(forKey: self.settingsFileKey)
     }
 }
 
@@ -37,6 +45,7 @@ extension SettingsViewModel {
         }
         set {
             settings.welcomeGreetings = newValue
+            saveSettings()
         }
     }
     
@@ -46,6 +55,7 @@ extension SettingsViewModel {
         }
         set {
             settings.showProgressRing = newValue
+            saveSettings()
         }
     }
     
@@ -55,6 +65,7 @@ extension SettingsViewModel {
         }
         set {
             settings.showStepsPreview = newValue
+            saveSettings()
         }
     }
     
@@ -64,6 +75,7 @@ extension SettingsViewModel {
         }
         set {
             settings.maxNumOfStepsPreview = newValue
+            saveSettings()
         }
     }
 }
