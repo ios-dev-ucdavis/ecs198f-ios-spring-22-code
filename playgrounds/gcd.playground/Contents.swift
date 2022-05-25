@@ -67,11 +67,40 @@ func submit_qos_tasks() {
     }
 }
 
+func run_global_task() {
+    DispatchQueue.global(qos: .background).async {
+        print("Async Task on the Global queue")
+    }
+    
+    DispatchQueue.global(qos: .background).sync {
+        print("Sync Task on the Global queue")
+    }
+}
+
+class ThreadSafeCollection<Element> {
+    private let queue = DispatchQueue(
+        label: "www.threadsafe.queue", attributes: .concurrent
+    )
+    private var _elements: [Element] = []
+    
+    var elements: [Element] {
+        queue.sync {
+            self._elements
+        }
+    }
+    
+    func append(_ element: Element) {
+        queue.async(flags: .barrier) {
+            self._elements.append(element)
+        }
+    }
+}
 
 func main() {
 //    run_serial_queue()
 //    run_concurrent_queue()
 //    submit_qos_tasks()
+//    run_global_task()
 }
 
 main()
