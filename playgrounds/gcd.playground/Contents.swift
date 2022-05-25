@@ -78,14 +78,21 @@ func run_global_task() {
 }
 
 class ThreadSafeCollection<Element> {
+    private let queue = DispatchQueue(
+        label: "www.threadsafe.queue", attributes: .concurrent
+    )
     private var _elements: [Element] = []
     
     var elements: [Element] {
-        self._elements
+        queue.sync {
+            self._elements
+        }
     }
     
     func append(_ element: Element) {
-        self._elements.append(element)
+        queue.async(flags: .barrier) {
+            self._elements.append(element)
+        }
     }
 }
 
