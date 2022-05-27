@@ -6,9 +6,8 @@
 //
 
 import Foundation
-import UIKit
 
-class Counter {
+actor Counter {
     let id = UUID()
     var value = 0
     
@@ -25,12 +24,12 @@ class SimpleActorDemo {
         await withTaskGroup(of: Void.self) { group in
             for _ in 1...1000 {
                 group.addTask {
-                    print(counter.increment())
+                    print(await counter.increment())
                 }
             }
         }
         
-        print("Final value = \(counter.value)")
+        print("Final value = \(await counter.value)")
     }
 }
 

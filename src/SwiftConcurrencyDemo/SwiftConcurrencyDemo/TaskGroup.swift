@@ -33,8 +33,16 @@ class TaskGroup {
         
         var results: [String: Int] = [:]
         
-        for id in ids {
-            results[id] = await fetchResult(id)
+        await withTaskGroup(of: (String, Int).self) { group in
+            for id in ids {
+                group.addTask {
+                    return (id, await fetchResult(id))
+                }
+            }
+            
+            for await (id, result) in group {
+                results[id] = result
+            }
         }
         
         print(results)
