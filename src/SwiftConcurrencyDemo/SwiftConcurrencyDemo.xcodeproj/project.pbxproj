@@ -12,6 +12,11 @@
 		884711BA283D8E3000600CFE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 884711B9283D8E3000600CFE /* Assets.xcassets */; };
 		884711BD283D8E3000600CFE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 884711BC283D8E3000600CFE /* Preview Assets.xcassets */; };
 		884711C4283D8E6B00600CFE /* AsyncLet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 884711C3283D8E6B00600CFE /* AsyncLet.swift */; };
+		884711C8283F4BD500600CFE /* TaskGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 884711C7283F4BD500600CFE /* TaskGroup.swift */; };
+		884711CA283F5F1400600CFE /* TaskHandle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 884711C9283F5F1400600CFE /* TaskHandle.swift */; };
+		884711CE283F778100600CFE /* SimpleActorDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 884711CD283F778100600CFE /* SimpleActorDemo.swift */; };
+		884711D0284016C900600CFE /* ReadOnlyAsync.swift in Sources */ = {isa = PBXBuildFile; fileRef = 884711CF284016C900600CFE /* ReadOnlyAsync.swift */; };
+		884711D2284025F200600CFE /* AsyncSequenceDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 884711D1284025F200600CFE /* AsyncSequenceDemo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +26,11 @@
 		884711B9283D8E3000600CFE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		884711BC283D8E3000600CFE /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		884711C3283D8E6B00600CFE /* AsyncLet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncLet.swift; sourceTree = "<group>"; };
+		884711C7283F4BD500600CFE /* TaskGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskGroup.swift; sourceTree = "<group>"; };
+		884711C9283F5F1400600CFE /* TaskHandle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskHandle.swift; sourceTree = "<group>"; };
+		884711CD283F778100600CFE /* SimpleActorDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleActorDemo.swift; sourceTree = "<group>"; };
+		884711CF284016C900600CFE /* ReadOnlyAsync.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadOnlyAsync.swift; sourceTree = "<group>"; };
+		884711D1284025F200600CFE /* AsyncSequenceDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncSequenceDemo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +66,11 @@
 				884711B5283D8E2F00600CFE /* SwiftConcurrencyDemoApp.swift */,
 				884711B7283D8E2F00600CFE /* ContentView.swift */,
 				884711C3283D8E6B00600CFE /* AsyncLet.swift */,
+				884711CF284016C900600CFE /* ReadOnlyAsync.swift */,
+				884711C7283F4BD500600CFE /* TaskGroup.swift */,
+				884711C9283F5F1400600CFE /* TaskHandle.swift */,
+				884711D1284025F200600CFE /* AsyncSequenceDemo.swift */,
+				884711CD283F778100600CFE /* SimpleActorDemo.swift */,
 				884711B9283D8E3000600CFE /* Assets.xcassets */,
 				884711BB283D8E3000600CFE /* Preview Content */,
 			);
@@ -142,7 +157,12 @@
 			files = (
 				884711C4283D8E6B00600CFE /* AsyncLet.swift in Sources */,
 				884711B8283D8E2F00600CFE /* ContentView.swift in Sources */,
+				884711D0284016C900600CFE /* ReadOnlyAsync.swift in Sources */,
+				884711CE283F778100600CFE /* SimpleActorDemo.swift in Sources */,
+				884711C8283F4BD500600CFE /* TaskGroup.swift in Sources */,
 				884711B6283D8E2F00600CFE /* SwiftConcurrencyDemoApp.swift in Sources */,
+				884711D2284025F200600CFE /* AsyncSequenceDemo.swift in Sources */,
+				884711CA283F5F1400600CFE /* TaskHandle.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -268,9 +288,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"SwiftConcurrencyDemo/Preview Content\"";
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -285,6 +307,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.ecs198f003.www.SwiftConcurrencyDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -296,9 +319,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"SwiftConcurrencyDemo/Preview Content\"";
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -313,6 +338,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.ecs198f003.www.SwiftConcurrencyDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

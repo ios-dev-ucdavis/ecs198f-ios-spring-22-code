@@ -25,11 +25,16 @@ class AsyncLet {
     }
 
     static func fetchResult() async -> Int {
-        let result1 = await calculation1()
-        let result2 = await calculation2()
+        defer {
+            print("Obtained Final Result.")
+        }
+        
+        async let result1 = calculation1()
+        async let result2 = calculation2()
 
-        let finalResult = result1 + result2 + 3
-        print("Obtained Final Result.")
+        let finalResult = await [result1, result2, 3].reduce(0, +)
+//        let finalResult = (await result1) + (await result2) + 3
+        
         return finalResult
     }
     
